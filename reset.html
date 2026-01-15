@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Math Master</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .reset-container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 400px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        .warning {
+            color: #f44336;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="reset-container">
+        <h1>🔄 Reset Math Master</h1>
+        <p>This will clear ALL saved data including:</p>
+        <ul style="text-align: left; color: #666;">
+            <li>Scores & Progress</li>
+            <li>Level Progress (0-100%)</li>
+            <li>Achievements</li>
+            <li>Leaderboard</li>
+            <li>Power-ups (Hints, Skips, Double Points)</li>
+            <li>Player Stats</li>
+        </ul>
+        <p class="warning">⚠️ This action cannot be undone!</p>
+        <button onclick="resetApp()">Reset Application</button>
+        <button onclick="window.location.href='index.html'" style="background: #2196F3;">Cancel</button>
+    </div>
+
+    <script>
+        function resetApp() {
+            // Clear all localStorage
+            localStorage.clear();
+            
+            // Show confirmation
+            alert('Application reset! All data cleared. Redirecting...');
+            
+            // Redirect to main app
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
+
+

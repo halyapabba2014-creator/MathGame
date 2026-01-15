@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Math Learning - Beginner Friendly 🧮</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="app-container">
+        <!-- Navigation Bar -->
+        <nav class="main-nav" id="mainNav">
+            <div class="nav-brand">
+                <h1>Math Learning 🧮</h1>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#progress" class="nav-link" data-section="progress">Progress</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="fontSizeBtn" class="icon-btn nav-icon" title="Adjust Font Size">🔤</button>
+                <button id="soundToggleBtn" class="icon-btn nav-icon" title="Toggle Sound">🔊</button>
+            </div>
+        </nav>
+
+        <!-- Home Section -->
+        <section id="home" class="page-section active">
+            <div class="container">
+                <div class="welcome-header">
+                    <h2 class="section-title">Welcome to Math Learning! 🎓</h2>
+                    <p class="section-subtitle">Learn math step-by-step, one concept at a time</p>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" id="topicSearch" class="search-input" placeholder="🔍 Search a math topic..." autocomplete="off">
+                    <div id="searchNoResults" class="search-no-results" style="display: none;">No topics found. Try “addition”, “shapes”, “time”, or “fractions”.</div>
+                </div>
+
+                <!-- Topic Buttons Grid -->
+                <div class="topics-grid" id="topicsGrid"></div>
+            </div>
+        </section>
+
+        <!-- Lessons Section -->
+        <section id="lessons" class="page-section">
+            <div class="container">
+                <button id="backToTopics" class="back-btn">← Back to Topics</button>
+                <h2 id="topicTitle" class="section-title"></h2>
+                <div class="lessons-grid" id="lessonsGrid">
+                    <!-- Lessons will be generated dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Lesson Page -->
+        <section id="lesson" class="page-section">
+            <div class="container lesson-container">
+                <button id="backToLessons" class="back-btn">← Back to Lessons</button>
+                
+                <!-- Progress Bar -->
+                <div class="lesson-progress">
+                    <div class="progress-bar">
+                        <div id="lessonProgressFill" class="progress-fill"></div>
+                    </div>
+                    <span id="lessonProgressText">Step 1 of 5</span>
+                </div>
+
+                <!-- Lesson Content -->
+                <div id="lessonContent" class="lesson-content">
+                    <!-- Content will be generated dynamically -->
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="lesson-navigation">
+                    <button id="prevStepBtn" class="btn-secondary" style="display: none;">← Previous</button>
+                    <button id="nextStepBtn" class="btn-primary">Next →</button>
+                    <button id="completeLessonBtn" class="btn-primary" style="display: none;">Complete Lesson ✓</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Section -->
+        <section id="progress" class="page-section">
+            <div class="container">
+                <h2 class="section-title">Your Progress 📊</h2>
+                <div class="progress-stats">
+                    <div class="stat-card">
+                        <h3>Lessons Completed</h3>
+                        <p id="completedLessons" class="stat-number">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Topics Mastered</h3>
+                        <p id="masteredTopics" class="stat-number">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Practice Time</h3>
+                        <p id="practiceTime" class="stat-number">0 min</p>
+                    </div>
+                </div>
+                <div class="badges-section">
+                    <h3>Your Badges 🏆</h3>
+                    <div id="badgesGrid" class="badges-grid"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
