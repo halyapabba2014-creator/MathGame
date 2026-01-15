@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: mathgame
+    env: static
+    staticPublishPath: .
+
